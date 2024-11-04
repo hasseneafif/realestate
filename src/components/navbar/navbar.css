@@ -99,3 +99,38 @@
     order: -1;
   }
 }
+
+/*Themes*/
+
+.dark-mode {
+  background-color: #121420;
+}
+
+.dark-mode .nav-link {
+  color: white;
+}
+
+.dark-mode .nav-link:hover {
+  color: #a8a8a8;
+}
+
+.dark-mode .fa-heart {
+  color: white;
+}
+
+/* Light mode styles */
+.light-mode {
+  background-color: #f8f9fa;
+}
+
+.light-mode .nav-link {
+  color: #000;
+}
+
+.light-mode .nav-link:hover {
+  color: #555;
+}
+
+.light-mode .fa-heart {
+  color: #000;
+}

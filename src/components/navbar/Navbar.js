@@ -7,8 +7,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./navbar.css";
 
 function NavBar() {
+  const [isLightMode, setIsLightMode] = useState(false); 
+
+  // Toggle between light and dark mode
+  // Logos and icons still need light mode versions
+  const toggleTheme = () => setIsLightMode(prevMode => !prevMode);
+
   return (
-    <Navbar expand="lg" className="py-3">
+    <Navbar expand="lg" className={`py-3 ${isLightMode ? 'light-mode' : 'dark-mode'}`}>
       <Container>
         <Navbar.Brand href="#" className="me-lg-5">
           <img className="logo" src={logo} alt="logo" />
@@ -31,6 +37,13 @@ function NavBar() {
             className="btn-primary d-none d-lg-inline-block"
           >
             Connect Wallet
+          </Button>
+          <Button
+            variant="outline-primary"
+            className="ms-3"
+            onClick={toggleTheme}
+          >
+            {isLightMode ? "Dark" : "Light"}
           </Button>
         </div>
       </Container>
